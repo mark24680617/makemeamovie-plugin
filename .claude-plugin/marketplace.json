@@ -1,0 +1,14 @@
+{
+  "name": "makemeamovie",
+  "owner": { "name": "LUQ LABS LLC", "email": "markqiu@luqlabs.com" },
+  "metadata": {
+    "description": "The Make Me a Movie plugin: make provenance-sealed films from a brief, in chat"
+  },
+  "plugins": [
+    {
+      "name": "makemeamovie",
+      "source": "./plugins/makemeamovie",
+      "description": "Make provenance-sealed films from a brief with Make Me a Movie"
+    }
+  ]
+}

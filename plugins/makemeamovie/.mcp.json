@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "makemeamovie": {
+      "type": "http",
+      "url": "https://api.makemeamovie.app/mcp"
+    }
+  }
+}
