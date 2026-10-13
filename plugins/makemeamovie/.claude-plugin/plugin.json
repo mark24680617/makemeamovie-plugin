@@ -1,7 +1,7 @@
 {
   "name": "makemeamovie",
   "displayName": "Make Me a Movie",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Make provenance-sealed films from a brief with Make Me a Movie",
   "homepage": "https://makemeamovie.app",
   "repository": "https://github.com/mark24680617/makemeamovie-plugin",

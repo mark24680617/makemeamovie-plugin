@@ -57,13 +57,16 @@ run `/makemeamovie:film` followed by your brief.
 - A share page is made only when you ask for one. It stays up until you delete the project on
   the website, and copies people already saved cannot be recalled.
 - Making a film spends credits from your account. The plugin has Claude show you a quote and
-  ask you to approve the figure before it starts, and the service will not start a film unless
-  the approved figure covers the quote. Quotes approved from chat are capped per account per
-  day (currently 3,000 credits), and a film can bill a little above its quote when a spoken
-  line runs long.
+  ask you to approve a figure at or a little above it, with room for spoken lines that run
+  long, before it starts. A film is charged at actual and never past the figure you approved:
+  if it would need more, it pauses and Claude asks you again. All spending from AI apps also
+  stays within a daily limit you set on your profile under **Connected apps**, from 0 (off) up
+  to 3,000 credits; Claude cannot change it. Lowering it applies to films approved
+  afterwards; to stop one already approved, pause it in the studio or revoke access (below).
 - You can revoke Claude's access at any time under **Connected apps** on your profile page,
-  <https://makemeamovie.app/profile/connections>. A film already being made keeps running to
-  its quote; ask Claude to stop it first if you want it stopped.
+  <https://makemeamovie.app/profile/connections>. A film it is making stops before its next
+  scene; what is already generating finishes and is kept, and you can resume the film in the
+  studio.
 
 ## Links
 
