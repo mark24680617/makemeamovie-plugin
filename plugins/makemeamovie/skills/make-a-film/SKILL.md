@@ -71,10 +71,10 @@ again. `generate_stage` is refused while `start_film` is making the film; `stop_
 
 ## Money rules
 
-- Prices when this plugin was published (`get_account` returns the live prices; use those
-  when they differ): a storyboard is 2 credits, a keyframe 8, a cast portrait 5, narration 2
-  per scene, dialogue 6 per scene, the music bed 10, the final cut 5, and a clip 18 per
-  ordered second.
+- Prices are in `get_account`: one figure each for a storyboard, a keyframe, a cast portrait,
+  narration and dialogue per scene, the music bed and the final cut, and for a clip a figure
+  per ordered second that depends on the clip model. Quote prices from `get_account` and
+  `quote_film`, never from memory.
 - Spending from AI apps is limited per account per day by a limit the user sets on their
   Make Me a Movie profile, under Connected apps: anything from 0 (off) up to 3,000 credits.
   `get_account` returns it as `daily_limit` (`daily_cap` is the most it can be). Only the
@@ -83,10 +83,10 @@ again. `generate_stage` is refused while `start_film` is making the film; `stop_
   back to that day. It resets at 00:00 UTC. `[daily_cap_reached]` says how much is left,
   or that spending from AI apps is turned off.
 - Quotes are estimates: clips are billed per ordered second, and a scene whose line runs long
-  is ordered longer than planned (up to 15 s, 270 credits, per scene). A line our voice has
-  not recorded yet is priced from its words, and its clip is charged for the length the
-  recording needs. `approve_credits` allows for that, and a film never charges past its
-  approval: it pauses, and `get_film_status` says why.
+  is ordered longer than planned (up to 15 s per scene, at the clip model's price). A line
+  our voice has not recorded yet is priced from its words, and its clip is charged for the
+  length the recording needs. `approve_credits` allows for that, and a film never charges
+  past its approval: it pauses, and `get_film_status` says why.
 - A failure refunds in full, automatically — an outage, a timeout, a rejected key, a model
   that withholds the video it made. The one exception to refunds applies only to stages
   started on the website after the author accepted a photoreal-people warning there; chat
